@@ -1,0 +1,391 @@
+{
+  "app": {
+    "name": "DREAMORA",
+    "tagline": "Turn your dreams into a daily journey"
+  },
+  "common": {
+    "language": "Change language",
+    "signOut": "Sign out",
+    "backToLogin": "Back to sign in"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "dashboard": "Home",
+    "companion": "Companion",
+    "dreamScenes": "Dream Scenes",
+    "faith": "Daily Faith",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": {
+      "metaTitle": "Sign in",
+      "title": "Welcome back",
+      "subtitle": "Sign in to continue your journey.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "forgot": "Forgot your password?",
+      "noAccount": "New to DREAMORA?",
+      "signupLink": "Create an account"
+    },
+    "signup": {
+      "metaTitle": "Create account",
+      "title": "Create your account",
+      "subtitle": "Start turning your dreams into a plan.",
+      "displayName": "Name (optional)",
+      "email": "Email",
+      "password": "Password",
+      "passwordHint": "At least 8 characters, with a letter and a number.",
+      "confirmPassword": "Confirm password",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "checkEmailTitle": "Check your email",
+      "checkEmailBody": "If this address can be registered, we've sent a confirmation link. Open it to activate your account."
+    },
+    "forgot": {
+      "metaTitle": "Reset password",
+      "title": "Reset your password",
+      "subtitle": "Enter your email and we'll send you a reset link.",
+      "email": "Email",
+      "submit": "Send reset link",
+      "sentTitle": "Check your email",
+      "sentBody": "If an account exists for this address, a reset link is on its way."
+    },
+    "reset": {
+      "metaTitle": "New password",
+      "title": "Choose a new password",
+      "subtitle": "Pick a strong password you haven't used before.",
+      "password": "New password",
+      "passwordHint": "At least 8 characters, with a letter and a number.",
+      "confirmPassword": "Confirm new password",
+      "submit": "Update password",
+      "expiredTitle": "This link has expired",
+      "expiredBody": "Request a new reset link to continue.",
+      "requestNew": "Request a new link"
+    },
+    "errors": {
+      "invalid_credentials": "Incorrect email or password.",
+      "email_not_confirmed": "Please confirm your email first. Check your inbox.",
+      "rate_limited": "Too many attempts. Please wait a moment and try again.",
+      "weak_password": "That password is too weak. Try a longer, less common one.",
+      "same_password": "Choose a password different from your current one.",
+      "session_expired": "Your reset link has expired. Please request a new one.",
+      "auth_callback": "That link is invalid or has expired. Please try again.",
+      "validation": "Please check the highlighted fields.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "validation": {
+      "email_invalid": "Enter a valid email address.",
+      "password_required": "Enter your password.",
+      "password_short": "Use at least 8 characters.",
+      "password_long": "Use at most 72 characters.",
+      "password_weak": "Include at least one letter and one number.",
+      "password_mismatch": "Passwords don't match.",
+      "name_long": "Name must be 80 characters or fewer.",
+      "invalid": "This field is invalid."
+    }
+  },
+  "dashboard": {
+    "metaTitle": "Home",
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening",
+      "night": "Good night"
+    },
+    "greetingWithName": "{greeting}, {name}",
+    "companionTitle": "Talk with your companion",
+    "companionBody": "Share what's on your mind, or start dreaming up a new goal. Together we'll turn it into small, doable steps.",
+    "companionCta": "Open chat",
+    "dreamScenesTitle": "Step into your dream",
+    "dreamScenesBody": "Imagine your next step in interactive scenes, then choose how the story continues.",
+    "dreamScenesCta": "Start a scene",
+    "faithTitle": "Daily Faith",
+    "faithBody": "Prayer times, remembrance, and a quiet Quran reading goal—at your own pace.",
+    "faithCta": "Open my faith space",
+    "continue": "Continue: {title}",
+    "recent": "Recent conversations",
+    "noConversations": "No conversations yet. Say hello to start one.",
+    "untitled": "Untitled conversation",
+    "comingSoon": "Coming soon",
+    "upcoming": {
+      "title": "What's next in DREAMORA",
+      "dream": {
+        "title": "Dream Mode",
+        "body": "Turn a dream into a story, scenes and a roadmap."
+      },
+      "journey": {
+        "title": "Daily Journey",
+        "body": "Track habits, prayers, Quran and fasting."
+      },
+      "mood": {
+        "title": "Mood & Letters",
+        "body": "Check in with yourself and write to your future self."
+      }
+    }
+  },
+  "settings": {
+    "metaTitle": "Settings",
+    "title": "Settings",
+    "subtitle": "Manage your profile, privacy and account.",
+    "profile": {
+      "title": "Profile",
+      "displayName": "Display name",
+      "language": "Language",
+      "timezone": "Time zone",
+      "save": "Save changes",
+      "saved": "Your changes were saved."
+    },
+    "privacy": {
+      "title": "Privacy & AI memory",
+      "memoryTitle": "Let the companion remember me",
+      "memoryBody": "Off by default. When on, the companion may use short notes about you across conversations so they feel continuous. You can turn this off and delete everything at any time. Your conversations are private to your account.",
+      "memoryNote": "Saving memories is rolling out in an upcoming update; for now this records your choice.",
+      "memoryOn": "On",
+      "memoryOff": "Off",
+      "memoryCount": "Saved memories: {count}",
+      "deleteMemory": "Delete all memories",
+      "deleteMemoryConfirm": "Delete every saved memory? This cannot be undone."
+    },
+    "account": {
+      "title": "Account",
+      "email": "Email",
+      "plan": "Plan",
+      "signOut": "Sign out"
+    },
+    "plans": {
+      "free": "Free",
+      "premium": "Premium",
+      "pro": "Pro"
+    },
+    "soon": "Data export and account deletion are coming soon.",
+    "errors": {
+      "name_long": "Name must be 80 characters or fewer.",
+      "language_invalid": "Choose a supported language.",
+      "timezone_invalid": "Choose a valid time zone.",
+      "invalid": "This field is invalid.",
+      "validation": "Please check the highlighted fields.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "companion": {
+    "metaTitle": "Companion",
+    "title": "Your companion",
+    "newChat": "New chat",
+    "history": "Conversations",
+    "noHistory": "Nothing here yet.",
+    "placeholder": "Write what's on your mind…",
+    "send": "Send",
+    "stop": "Stop",
+    "retry": "Retry",
+    "disclaimer": "The companion is an AI, not a therapist or a doctor. In an emergency, contact your local emergency services.",
+    "empty": {
+      "title": "How are you today?",
+      "body": "Tell me about a dream, a goal, or just how you're feeling.",
+      "s1": "Help me break a big dream into small steps",
+      "s2": "I'm feeling stuck today",
+      "s3": "Plan a gentle morning routine with me"
+    },
+    "you": "You",
+    "assistant": "Companion",
+    "typing": "Writing…",
+    "deleteConversation": "Delete conversation",
+    "deleteConfirm": "Delete this conversation? This cannot be undone.",
+    "errors": {
+      "rate_limited": "You're sending messages quite fast. Please wait a bit and try again.",
+      "rate_limit_unavailable": "The message limit could not be checked right now. Please try again shortly.",
+      "not_configured": "The AI service isn't set up yet.",
+      "service_unavailable": "The chat service is temporarily unavailable. Please try again shortly.",
+      "save_failed": "The conversation couldn't be saved. Your message was not saved; please retry.",
+      "upstream": "The companion couldn't reply right now. Please try again.",
+      "provider_rate_limited": "The AI service is busy right now. Please wait a moment and retry.",
+      "blocked": "I couldn't answer that one. Try rephrasing it.",
+      "unauthorized": "Your session has ended. Please sign in again.",
+      "cancelled": "The reply was stopped before it finished. You can try again.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "dreamScenes": {
+    "metaTitle": "Dream Scenes",
+    "title": "Dream Scenes",
+    "subtitle": "Turn a dream or goal into an interactive visualization, then choose how the scene continues.",
+    "exit": "Exit scene",
+    "note": "This is imagination and motivation, not therapy or a promise of what will happen.",
+    "goalLabel": "What dream or goal would you like to explore?",
+    "goalPlaceholder": "Describe a dream or goal you want to move toward...",
+    "start": "Begin scene",
+    "generating": "Writing the scene...",
+    "sceneNumber": "Scene {number}",
+    "firstStep": "A real-life first step",
+    "chooseNext": "How would you like the scene to continue?",
+    "choiceLabel": "Choose or describe what you do next",
+    "choicePlaceholder": "Choose a path or write your own...",
+    "continue": "Continue scene",
+    "newScene": "Start another dream",
+    "history": "Saved scenes",
+    "errors": {
+      "rate_limited": "You've reached the usage limit for now. Wait a little and try again.",
+      "rate_limit_unavailable": "The usage limit could not be checked. Please try again shortly.",
+      "not_configured": "The AI service isn't configured yet.",
+      "service_unavailable": "The service is temporarily unavailable. Please try again shortly.",
+      "save_failed": "The scene could not be saved. It was not saved; please retry.",
+      "upstream": "The scene could not be created right now. Please try again.",
+      "provider_rate_limited": "The AI service is busy right now. Wait a little and retry.",
+      "blocked": "The scene could not be created from that text. Try rephrasing it.",
+      "invalid_output": "The response did not follow the required format. Please retry.",
+      "unauthorized": "Your session has ended. Please sign in again.",
+      "load_failed": "Saved scenes could not be loaded.",
+      "not_found": "That saved scene could not be found."
+    }
+  },
+  "faith": {
+    "metaTitle": "Daily Faith",
+    "title": "My day with Allah",
+    "subtitle": "A calm space for prayer, remembrance, and Quran—one gentle step at a time.",
+    "method": "Calculation: Egyptian General Authority of Survey",
+    "cityLabel": "City",
+    "cities": {
+      "cairo": "Cairo",
+      "alexandria": "Alexandria",
+      "giza": "Giza",
+      "luxor": "Luxor",
+      "aswan": "Aswan",
+      "mansoura": "Mansoura"
+    },
+    "nextPrayer": "Next prayer",
+    "noNextPrayer": "Today's prayers have passed; Fajr is next.",
+    "prayerTimes": {
+      "fajr": "Fajr",
+      "sunrise": "Sunrise",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "tracking": {
+      "title": "Optional daily tracking",
+      "description": "Tracking is optional and saved only to your private account. Marks are personal reminders, not verification of worship.",
+      "enable": "Enable private tracking",
+      "disable": "Turn off tracking",
+      "enabled": "Private tracking is on.",
+      "disabled": "Tracking is off; new progress will not be saved.",
+      "delete": "Delete all saved progress",
+      "deleteConfirm": "Delete all your saved spiritual progress? This cannot be undone.",
+      "deleted": "Your saved progress has been deleted.",
+      "error": "Your progress could not be saved right now. Please try again shortly.",
+      "storageError": "Your settings could not be saved on this device.",
+      "loading": "Loading your private progress...",
+      "saving": "Saving your private progress...",
+      "retry": "Retry"
+    },
+    "progress": {
+      "title": "Your steps today",
+      "summary": "{done} of {total} steps",
+      "note": "This is your own self-report; we do not verify prayer or worship."
+    },
+    "prayers": {
+      "title": "Prayer times",
+      "trackTitle": "Prayer check-in",
+      "trackNote": "Mark them as a personal reminder if you wish."
+    },
+    "adhkar": {
+      "title": "Remembrance",
+      "morning": "Morning adhkar",
+      "evening": "Evening adhkar",
+      "afterPrayer": "After prayer",
+      "morning1": {
+        "text": "أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيء قدير. رب أسألك خير ما في هذا اليوم وخير ما بعده، وأعوذ بك من شر ما في هذا اليوم وشر ما بعده. رب أعوذ بك من الكسل وسوء الكبر، رب أعوذ بك من عذاب في النار وعذاب في القبر.",
+        "meaning": "An invocation asking for the day's good and refuge from harm.",
+        "reference": "Sahih Muslim 2723",
+        "count": "Once"
+      },
+      "morning2": {
+        "text": "اللهم أنت ربي، لا إله إلا أنت، خلقتني وأنا عبدك، وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك عليّ، وأبوء بذنبي، فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.",
+        "meaning": "The master supplication for forgiveness, acknowledging Allah's blessings and asking for forgiveness.",
+        "reference": "Sahih al-Bukhari 6306",
+        "count": "Once"
+      },
+      "evening1": {
+        "text": "أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيء قدير. رب أسألك خير ما في هذه الليلة وخير ما بعدها، وأعوذ بك من شر هذه الليلة وشر ما بعدها. رب أعوذ بك من الكسل وسوء الكبر، رب أعوذ بك من عذاب في النار وعذاب في القبر.",
+        "meaning": "An invocation asking for the night's good and refuge from harm.",
+        "reference": "Sahih Muslim 2723",
+        "count": "Once"
+      },
+      "evening2": {
+        "text": "اللهم أنت ربي، لا إله إلا أنت، خلقتني وأنا عبدك، وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك عليّ، وأبوء بذنبي، فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.",
+        "meaning": "The master supplication for forgiveness, acknowledging Allah's blessings and asking for forgiveness.",
+        "reference": "Sahih al-Bukhari 6306",
+        "count": "Once"
+      },
+      "post1": {
+        "text": "أستغفر الله.",
+        "meaning": "Seeking forgiveness from Allah.",
+        "reference": "Sahih Muslim 591",
+        "count": "3 times"
+      },
+      "post2": {
+        "text": "اللهم أنت السلام ومنك السلام، تباركت ذا الجلال والإكرام.",
+        "meaning": "An invocation of peace after prayer.",
+        "reference": "Sahih Muslim 591",
+        "count": "Once"
+      },
+      "repeat": "Repetitions",
+      "done": "Complete",
+      "readMeaning": "Meaning"
+    },
+    "tasbeeh": {
+      "title": "Tasbeeh counter",
+      "description": "After prayer: say SubhanAllah, Alhamdulillah, and Allahu akbar 33 times each, then complete 100 with: There is no god but Allah alone, without partner; to Him belongs dominion and praise, and He is powerful over all things.",
+      "reference": "Sahih Muslim 597",
+      "count": "Count",
+      "current": "Next phrase",
+      "subhanallah": "SubhanAllah",
+      "alhamdulillah": "Alhamdulillah",
+      "allahuakbar": "Allahu akbar",
+      "finalTahlil": "There is no god but Allah alone, without partner; to Him belongs dominion and praise, and He is powerful over all things.",
+      "complete": "Tasbeeh complete",
+      "tap": "Count",
+      "reset": "Reset"
+    },
+    "quran": {
+      "title": "Quran reading (optional)",
+      "description": "Choose a daily goal that suits you; you can turn it off at any time.",
+      "goal": "Pages per day",
+      "off": "No goal",
+      "pages": "Pages read",
+      "addPage": "Add a page",
+      "subtractPage": "Remove a page",
+      "complete": "You've reached today's goal. May it be accepted."
+    },
+    "reminders": {
+      "title": "Gentle reminders",
+      "enable": "Enable prayer reminders",
+      "disable": "Turn off prayer reminders",
+      "message": "It is time for {prayer}. Take a moment for prayer and calm if you wish.",
+      "enableRemembrance": "Enable remembrance and reflection reminders",
+      "disableRemembrance": "Turn off remembrance and reflection reminders",
+      "remembranceTitle": "A moment for remembrance",
+      "remembranceMessage": "If you wish, take a quiet moment for remembrance or reflection.",
+      "remembranceSchedule": "Remembrance and reflection reminders are scheduled for 8 a.m. and 8 p.m. in your selected city.",
+      "enabled": "Reminders are enabled on this device.",
+      "tabNote": "Reminders appear only while this page stays open.",
+      "permissionDenied": "Notifications were not allowed. You can change this in your browser settings.",
+      "unsupported": "This browser does not support reminder notifications."
+    },
+    "wellbeing": {
+      "title": "Gentleness and tranquility",
+      "body": "Remembrance and drawing closer to Allah may offer space for spiritual calm and reflection; experiences differ. This app is not treatment and does not replace professional mental or medical care when needed."
+    },
+    "credits": {
+      "title": "Optional demo credits",
+      "description": "Demo credits are for an app visit, at most once per UTC day. They are unrelated to prayer or remembrance and are not religious merit or cash value. No real coupons or commercial partnerships are available.",
+      "claim": "Claim today's demo credit",
+      "claimed": "Today's demo credit was added.",
+      "alreadyClaimed": "Today's credit has already been claimed.",
+      "balance": "Demo balance: {balance}",
+      "error": "The demo balance could not be updated. Please try again later."
+    }
+  }
+}
