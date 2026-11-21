@@ -80,7 +80,9 @@ export function SignupForm() {
           error={fieldError('confirmPassword')}
         />
         <SubmitButton>{t('signup.submit')}</SubmitButton>
-      </form>      <div className="my-4 text-center text-xs opacity-60">أو</div>
+            </form>
+
+      <div className="my-4 text-center text-xs opacity-60">أو</div>
       <GoogleButton label="التسجيل بجوجل" />
 
       <p className="mt-6 text-center text-sm text-muted">
