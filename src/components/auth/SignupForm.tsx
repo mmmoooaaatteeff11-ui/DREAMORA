@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { signup } from '@/server/services/auth';
 import { initialAuthState } from '@/types/auth';
 import { SubmitButton } from './SubmitButton';
-
+import GoogleButton from "@/components/GoogleButton"; 
 export function SignupForm() {
   const t = useTranslations('auth');
   const [state, formAction] = useFormState(signup, initialAuthState);
@@ -80,7 +80,8 @@ export function SignupForm() {
           error={fieldError('confirmPassword')}
         />
         <SubmitButton>{t('signup.submit')}</SubmitButton>
-      </form>
+      </form>      <div className="my-4 text-center text-xs opacity-60">أو</div>
+      <GoogleButton label="التسجيل بجوجل" />
 
       <p className="mt-6 text-center text-sm text-muted">
         {t('signup.haveAccount')}{' '}

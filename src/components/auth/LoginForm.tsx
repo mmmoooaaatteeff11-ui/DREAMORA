@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { login } from '@/server/services/auth';
 import { initialAuthState } from '@/types/auth';
 import { SubmitButton } from './SubmitButton';
-
+import GoogleButton from "@/components/GoogleButton";
 export function LoginForm({ next, callbackError }: { next?: string; callbackError?: boolean }) {
   const t = useTranslations('auth');
   const [state, formAction] = useFormState(login, initialAuthState);
@@ -58,7 +58,8 @@ export function LoginForm({ next, callbackError }: { next?: string; callbackErro
         </div>
         <SubmitButton>{t('login.submit')}</SubmitButton>
       </form>
-
+      <div className="my-4 text-center text-xs opacity-60">أو</div>
+      <GoogleButton label="الدخول بجوجل" />
       <p className="mt-6 text-center text-sm text-muted">
         {t('login.noAccount')}{' '}
         <Link href="/signup" className="font-medium text-primary-light hover:underline">
