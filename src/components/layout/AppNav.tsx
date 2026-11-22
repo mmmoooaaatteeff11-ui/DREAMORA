@@ -63,12 +63,17 @@ const GearIcon = ({ className }: IconProps) => (
 const ITEMS = [
   { href: '/dashboard', key: 'dashboard', Icon: HomeIcon },
   { href: '/companion', key: 'companion', Icon: ChatIcon },
-  { href: '/dream-scenes', key: 'dreamScenes', Icon: DreamIcon },
   { href: '/faith', key: 'faith', Icon: MoonIcon },
+  { href: '/journey', key: 'journey', Icon: DreamIcon },
   { href: '/settings', key: 'settings', Icon: GearIcon },
 ] as const;
 
+const JOURNEY_PATHS = ['/journey', '/mood', '/journal', '/letters', '/roadmap', '/vision', '/dream-scenes'] as const;
+
 function isActive(pathname: string, href: string) {
+  if (href === '/journey' && JOURNEY_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))) {
+    return true;
+  }
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 

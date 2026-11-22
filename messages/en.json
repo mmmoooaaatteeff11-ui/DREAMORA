@@ -14,6 +14,7 @@
     "companion": "Companion",
     "dreamScenes": "Dream Scenes",
     "faith": "Daily Faith",
+    "journey": "Journey",
     "settings": "Settings"
   },
   "auth": {
@@ -125,6 +126,37 @@
       }
     }
   },
+  "journey": {
+    "metaTitle": "Journey",
+    "title": "Your journey",
+    "description": "One place for your daily steps, dreams, and notes to yourself.",
+    "cards": {
+      "mood": {
+        "title": "Mood",
+        "description": "Take a moment to note how you feel today."
+      },
+      "journal": {
+        "title": "Journal",
+        "description": "Write what's on your mind and return to it anytime."
+      },
+      "letters": {
+        "title": "Letters to your future self",
+        "description": "Write a note to open at a time you choose."
+      },
+      "roadmap": {
+        "title": "Roadmap",
+        "description": "Break your goals into small steps you can follow."
+      },
+      "vision": {
+        "title": "Vision board",
+        "description": "Collect images and ideas that remind you of your dreams."
+      },
+      "dreamScenes": {
+        "title": "Dream Scenes",
+        "description": "Imagine your dream in interactive scenes and choose your next step."
+      }
+    }
+  },
   "settings": {
     "metaTitle": "Settings",
     "title": "Settings",
@@ -202,6 +234,9 @@
       "upstream": "The companion couldn't reply right now. Please try again.",
       "provider_rate_limited": "The AI service is busy right now. Please wait a moment and retry.",
       "blocked": "I couldn't answer that one. Try rephrasing it.",
+      "insufficient_credits": "You don't have enough credits for this message. Add credits and try again.",
+      "quota_exhausted_no_credits": "You've used your free messages and don't have enough credits. Add credits and try again.",
+      "plan_required": "This feature needs a higher plan. Upgrade your plan and try again.",
       "unauthorized": "Your session has ended. Please sign in again.",
       "cancelled": "The reply was stopped before it finished. You can try again.",
       "generic": "Something went wrong. Please try again."
