@@ -676,10 +676,12 @@
     },
     "credits": {
       "title": "Optional demo credits",
-      "description": "Demo credits are for an app visit, at most once per UTC day. They are unrelated to prayer or remembrance and are not religious merit or cash value. No real coupons or commercial partnerships are available.",
+      "description": "Demo credits are for an app visit, at most once per UTC day. They are unrelated to worship or religious merit. No real coupons or commercial partnerships are available.",
       "claim": "Claim today's demo credit",
       "claimed": "Today's demo credit was added.",
       "alreadyClaimed": "Today's credit has already been claimed.",
+      "routineAwarded": "+{n} credits for completing your daily routine in the app",
+      "routineTooEarly": "Credits unlock after Isha time (6 PM)",
       "balance": "Demo balance: {balance}",
       "error": "The demo balance could not be updated. Please try again later."
     }

@@ -134,6 +134,7 @@ export function FaithClient({ userId }: { userId: string }) {
   const [creditBalance, setCreditBalance] = useState<number | null>(null);
   const [creditError, setCreditError] = useState(false);
   const [creditMessage, setCreditMessage] = useState('');
+  const [routineCredit, setRoutineCredit] = useState<{ awarded: number; reason: string } | null>(null);
   const [claimingCredit, setClaimingCredit] = useState(false);
   const lastSavedRef = useRef('');
 
@@ -252,8 +253,22 @@ export function FaithClient({ userId }: { userId: string }) {
         headers: { 'Content-Type': 'application/json' },
         body: serialized,
       })
-        .then((response) => {
+        .then(async (response) => {
           if (!response.ok) throw new Error('Progress unavailable');
+          const value: unknown = await response.json();
+          if (
+            isRecord(value) &&
+            typeof value.awarded === 'number' &&
+            Number.isInteger(value.awarded) &&
+            value.awarded >= 0 &&
+            typeof value.reason === 'string'
+          ) {
+            const awarded = value.awarded;
+            setRoutineCredit({ awarded, reason: value.reason });
+            if (awarded > 0) {
+              setCreditBalance((current) => (current === null ? null : current + awarded));
+            }
+          }
           lastSavedRef.current = serialized;
           setSyncMessage(null);
         })
@@ -788,6 +803,14 @@ export function FaithClient({ userId }: { userId: string }) {
       <Card>
         <h2 className="font-heading text-lg font-semibold">{t('credits.title')}</h2>
         <p className="mt-2 text-sm leading-7 text-muted">{t('credits.description')}</p>
+        {routineCredit && routineCredit.awarded > 0 && (
+          <p className="mt-3 text-sm text-primary-light" role="status">
+            {t('credits.routineAwarded', { n: routineCredit.awarded })}
+          </p>
+        )}
+        {routineCredit?.reason === 'too_early' && (
+          <p className="mt-3 text-sm text-muted">{t('credits.routineTooEarly')}</p>
+        )}
         {creditBalance !== null && (
           <p className="mt-3 text-sm text-primary-light">{t('credits.balance', { balance: creditBalance })}</p>
         )}

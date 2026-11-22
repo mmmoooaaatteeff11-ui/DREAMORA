@@ -1,4 +1,5 @@
 import type { NextRequest } from 'next/server';
+import { z } from 'zod';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { createClient } from '@/lib/supabase/server';
 import { faithProgressSchema } from '@/lib/validation/faith';
@@ -6,6 +7,32 @@ import { faithProgressSchema } from '@/lib/validation/faith';
 export const dynamic = 'force-dynamic';
 
 const fail = (error: string, status: number) => Response.json({ error }, { status });
+const routineAwardSchema = z.array(
+  z.object({
+    out_awarded: z.number().int().nonnegative(),
+    out_reason: z.string(),
+  }),
+);
+
+function cairoDateKey(date = new Date()): string {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Africa/Cairo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date);
+  const value = (type: Intl.DateTimeFormatPartTypes) =>
+    parts.find((part) => part.type === type)?.value ?? '';
+  return `${value('year')}-${value('month')}-${value('day')}`;
+}
+
+function logRpcError(error: unknown) {
+  const code =
+    typeof error === 'object' && error !== null && 'code' in error && typeof error.code === 'string'
+      ? error.code
+      : 'unknown';
+  console.error('[faith] routine award failed', code);
+}
 
 function isSameOrigin(request: NextRequest): boolean {
   const origin = request.headers.get('origin');
@@ -75,6 +102,8 @@ export async function POST(request: NextRequest) {
   const parsed = faithProgressSchema.safeParse(body);
   if (!parsed.success) return fail('invalid_request', 400);
 
+  let routineAward = { awarded: 0, reason: 'not_today' };
+
   try {
     const admin = createAdminClient();
     const { error } = await admin.from('spiritual_daily_progress').upsert(
@@ -97,7 +126,41 @@ export async function POST(request: NextRequest) {
     return fail('service_unavailable', 503);
   }
 
-  return Response.json({ saved: true }, { headers: { 'Cache-Control': 'no-store' } });
+  const today = cairoDateKey();
+  if (process.env.CREDITS_ENABLED !== 'true') {
+    routineAward.reason = 'disabled';
+  } else if (parsed.data.date === today) {
+    routineAward.reason = 'unavailable';
+    try {
+      const admin = createAdminClient();
+      const { data, error } = await admin.rpc('award_faith_day', {
+        p_user: user.id,
+        p_day: today,
+      });
+      if (error) {
+        logRpcError(error);
+      } else {
+        const parsedAward = routineAwardSchema.safeParse(data);
+        const row = parsedAward.success ? parsedAward.data[0] : undefined;
+        if (row) {
+          routineAward = {
+            awarded: row.out_awarded,
+            reason: row.out_reason,
+          };
+        } else {
+          console.error('[faith] routine award failed', 'invalid_result');
+          routineAward.reason = 'unavailable';
+        }
+      }
+    } catch (error) {
+      logRpcError(error);
+    }
+  }
+
+  return Response.json(
+    { saved: true, ...routineAward },
+    { headers: { 'Cache-Control': 'no-store' } },
+  );
 }
 
 export async function DELETE(request: NextRequest) {
