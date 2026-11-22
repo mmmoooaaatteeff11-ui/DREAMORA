@@ -369,6 +369,47 @@
       "not_found": "That letter could not be found."
     }
   },
+  "vision": {
+    "metaTitle": "Vision Board",
+    "title": "Your vision board",
+    "description": "Keep meaningful words, quotes, and symbols in view. Drag cards to arrange them.",
+    "boardTitle": "Your board",
+    "itemCount": "{count} of {max} items",
+    "empty": "Your board is empty. Add an item below, then drag it into place.",
+    "addTitle": "Add an item",
+    "kindLabel": "Kind",
+    "kinds": {
+      "text": "Text",
+      "quote": "Quote",
+      "emoji": "Emoji"
+    },
+    "contentLabel": "Content",
+    "contentPlaceholder": "Write a word, thought, or quote...",
+    "characters": "{count} / {max} characters",
+    "emojiLabel": "Emoji (optional)",
+    "emojiHint": "Used as an accent for emoji cards.",
+    "colorLabel": "Card color",
+    "chooseColor": "Choose color {color}",
+    "sizeLabel": "Card size",
+    "sizes": {
+      "1": "Small",
+      "2": "Medium",
+      "3": "Large"
+    },
+    "addItem": "Add to board",
+    "limitReached": "Board is full",
+    "bringToFront": "Bring forward",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this board item?",
+    "errors": {
+      "validation": "Check the item details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again.",
+      "not_found": "That board item could not be found.",
+      "load_failed": "Your vision board could not be loaded.",
+      "limit_reached": "Your board is full. You can have up to 60 items."
+    }
+  },
   "journal": {
     "metaTitle": "Journal",
     "title": "Your journal",
