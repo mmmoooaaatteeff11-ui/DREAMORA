@@ -180,13 +180,13 @@
         "title": "Mood",
         "description": "Take a moment to note how you feel today."
       },
-      "journal": {
-        "title": "Journal",
-        "description": "Write what's on your mind and return to it anytime."
-      },
       "letters": {
         "title": "Letters to your future self",
         "description": "Write a note to open at a time you choose."
+      },
+      "journal": {
+        "title": "Journal",
+        "description": "Write what's on your mind and return to it anytime."
       },
       "roadmap": {
         "title": "Roadmap",
@@ -245,6 +245,52 @@
       "validation": "Please check the highlighted fields.",
       "session_expired": "Your session has ended. Please sign in again.",
       "generic": "Something went wrong. Please try again."
+    }
+  },
+  "letters": {
+    "metaTitle": "Future Letters",
+    "title": "Letters to your future self",
+    "description": "Write a letter now and choose a future date to open it.",
+    "newLetter": "Write a letter",
+    "editLetter": "Edit your waiting letter",
+    "titleLabel": "Title",
+    "bodyLabel": "Your letter",
+    "bodyPlaceholder": "What would you like your future self to remember?",
+    "remainingCharacters": "{count} characters remaining",
+    "deliverOnLabel": "Open on",
+    "dateRange": "Choose a date from {min} through {max}.",
+    "presets": {
+      "days30": "30 days",
+      "days90": "90 days",
+      "months6": "6 months",
+      "year1": "1 year"
+    },
+    "save": "Save letter",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "waitingTitle": "Waiting",
+    "waitingEmpty": "No letters are waiting yet.",
+    "opensOn": "Opens on {date}",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "deleteConfirm": "Delete this waiting letter? This cannot be undone.",
+    "arrivedTitle": "Arrived",
+    "arrivedEmpty": "Letters will appear here when their date arrives.",
+    "arrivedOn": "Arrived on {date}",
+    "open": "Open",
+    "close": "Close",
+    "created": "Your letter was saved.",
+    "updated": "Your letter was updated.",
+    "deleted": "Your letter was deleted.",
+    "errors": {
+      "validation": "Check the letter details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again.",
+      "load_failed": "Letters could not be loaded. Please try again.",
+      "future_date": "Pick a future date.",
+      "sealed": "This letter is sealed.",
+      "not_found": "That letter could not be found."
     }
   },
   "journal": {
