@@ -126,6 +126,51 @@
       }
     }
   },
+  "mood": {
+    "metaTitle": "Mood check-in",
+    "title": "How are you feeling today?",
+    "description": "Choose the feeling that fits best. There is no right or wrong answer.",
+    "quickTitle": "How are you today?",
+    "quickDescription": "Pick a feeling for a quick check-in.",
+    "moods": {
+      "joyful": "Joyful",
+      "grateful": "Grateful",
+      "calm": "Calm",
+      "hopeful": "Hopeful",
+      "motivated": "Motivated",
+      "tired": "Tired",
+      "anxious": "Anxious",
+      "sad": "Sad",
+      "angry": "Angry",
+      "lonely": "Lonely"
+    },
+    "noteLabel": "Optional note",
+    "notePlaceholder": "Would you like to write anything about how you feel?",
+    "save": "Save check-in",
+    "saving": "Saving...",
+    "saved": "Your check-in was saved.",
+    "support": {
+      "gentleLine": "There is room for every feeling. Take your time; your companion is here if you would like to talk.",
+      "companion": "Talk with your companion"
+    },
+    "history": {
+      "title": "Last 14 days",
+      "description": "A simple view of your daily check-ins, without judgment.",
+      "empty": "No check-ins yet. When you're ready, choose a feeling to begin.",
+      "chartLabel": "Mood scores over the last 14 days",
+      "dayScore": "{date}, mood score {score} out of 5",
+      "dayEmpty": "{date}, no check-in",
+      "today": "Today",
+      "low": "Lower score",
+      "high": "Higher score"
+    },
+    "errors": {
+      "validation": "Choose a valid mood and keep the note to 1,000 characters or fewer.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Your check-in could not be saved right now. Please try again.",
+      "load_failed": "Your mood history could not be loaded right now."
+    }
+  },
   "journey": {
     "metaTitle": "Journey",
     "title": "Your journey",
