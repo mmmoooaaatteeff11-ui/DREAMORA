@@ -247,6 +247,82 @@
       "generic": "Something went wrong. Please try again."
     }
   },
+  "roadmap": {
+    "metaTitle": "Roadmap",
+    "title": "Your roadmap",
+    "description": "Turn dreams into goals, milestones, and manageable tasks.",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "moveUp": "Move {title} up",
+    "moveDown": "Move {title} down",
+    "dreams": {
+      "title": "Add a dream",
+      "titleLabel": "Dream title",
+      "add": "Add dream",
+      "listTitle": "Dreams and their goals",
+      "empty": "No dreams yet. Add one above, or create a goal on its own.",
+      "noGoals": "No goals linked to this dream yet.",
+      "delete": "Delete dream",
+      "deleteConfirm": "Delete this dream? Its dream scenes will be deleted, but its goals, milestones, and tasks will remain unlinked."
+    },
+    "goals": {
+      "add": "Add a goal",
+      "titleLabel": "Goal title",
+      "descriptionLabel": "Description",
+      "deadlineLabel": "Deadline",
+      "statusLabel": "Status",
+      "dreamLabel": "Link to a dream (optional)",
+      "noDream": "No dream",
+      "save": "Save goal",
+      "progress": "Progress",
+      "deadlineValue": "Deadline: {date}",
+      "delete": "Delete goal",
+      "deleteConfirm": "Delete this goal? Its milestones and tasks will also be deleted. Linked letters will remain without this goal link.",
+      "unassignedTitle": "Goals without a dream"
+    },
+    "statuses": {
+      "active": "Active",
+      "completed": "Completed",
+      "paused": "Paused",
+      "archived": "Archived"
+    },
+    "milestones": {
+      "title": "Milestones",
+      "titleLabel": "Milestone title",
+      "dueDateLabel": "Due date",
+      "add": "Add milestone",
+      "empty": "No milestones yet.",
+      "toggle": "Mark {title} complete",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this milestone? Its tasks will remain under the goal."
+    },
+    "tasks": {
+      "title": "Tasks",
+      "titleLabel": "Task title",
+      "cadenceLabel": "Cadence",
+      "dueDateLabel": "Due date",
+      "add": "Add task",
+      "empty": "No tasks yet.",
+      "toggle": "Mark {title} complete",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this task?"
+    },
+    "cadences": {
+      "once": "Once",
+      "daily": "Daily",
+      "weekly": "Weekly"
+    },
+    "errors": {
+      "validation": "Check the details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again.",
+      "load_failed": "Your roadmap could not be loaded. Please try again.",
+      "not_found": "That roadmap item could not be found.",
+      "position_limit": "There are too many items to add another here."
+    }
+  },
   "letters": {
     "metaTitle": "Future Letters",
     "title": "Letters to your future self",
