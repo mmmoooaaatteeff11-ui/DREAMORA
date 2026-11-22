@@ -546,6 +546,12 @@
     },
     "nextPrayer": "الصلاة القادمة",
     "noNextPrayer": "انتهت صلوات اليوم؛ الفجر هو الصلاة القادمة.",
+    "peaceReminder": {
+      "title": "تذكير السلام لليوم",
+      "source": "المصدر",
+      "meaning": "المعنى",
+      "gentleStep": "خطوة لطيفة"
+    },
     "prayerTimes": {
       "fajr": "الفجر",
       "sunrise": "الشروق",

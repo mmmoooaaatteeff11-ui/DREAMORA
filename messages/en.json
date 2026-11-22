@@ -546,6 +546,12 @@
     },
     "nextPrayer": "Next prayer",
     "noNextPrayer": "Today's prayers have passed; Fajr is next.",
+    "peaceReminder": {
+      "title": "Peace reminder of the day",
+      "source": "Source",
+      "meaning": "Meaning",
+      "gentleStep": "A gentle step"
+    },
     "prayerTimes": {
       "fajr": "Fajr",
       "sunrise": "Sunrise",

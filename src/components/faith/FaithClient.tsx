@@ -15,6 +15,7 @@ import {
   type PrayerTimeKey,
 } from '@/lib/faith/prayer-times';
 import { faithProgressSchema, type FaithProgress } from '@/lib/validation/faith';
+import { reminderForDay } from '@/content/faith-reminders';
 
 type Settings = {
   city: CityId;
@@ -138,6 +139,7 @@ export function FaithClient({ userId }: { userId: string }) {
 
   const city = CITIES[settings.city];
   const today = dayKeyInTimeZone(now, city.timeZone);
+  const peaceReminder = useMemo(() => reminderForDay(today), [today]);
   const prayerTimes = useMemo(
     () => calculatePrayerTimes(settings.city, dateKeyToUtcMidday(today, 0)),
     [settings.city, today],
@@ -553,6 +555,35 @@ export function FaithClient({ userId }: { userId: string }) {
         {progressDeleted && <p className="mt-2 text-sm text-primary-light" role="status">{t('tracking.deleted')}</p>}
         {storageError && <p className="mt-4 text-sm text-rose-300" role="alert">{t('tracking.storageError')}</p>}
       </Card>
+
+      {settings.tracking && (
+        <Card>
+          <h2 className="font-heading text-xl font-semibold">{t('peaceReminder.title')}</h2>
+          <div className="mt-5 space-y-4">
+            <blockquote className="text-lg leading-9 text-primary-light sm:text-xl" dir="rtl">
+              {peaceReminder.ar}
+            </blockquote>
+            <div className="text-sm">
+              <p className="font-medium text-muted">{t('peaceReminder.source')}</p>
+              <p className="mt-1">
+                {locale === 'ar' ? peaceReminder.sourceAr : peaceReminder.sourceEn}
+              </p>
+            </div>
+            <div className="text-sm">
+              <p className="font-medium text-muted">{t('peaceReminder.meaning')}</p>
+              <p className="mt-1">
+                {locale === 'ar' ? peaceReminder.meaningAr : peaceReminder.meaningEn}
+              </p>
+            </div>
+            <div className="rounded-xl border border-glass-border bg-white/[0.03] p-4 text-sm">
+              <p className="font-medium text-muted">{t('peaceReminder.gentleStep')}</p>
+              <p className="mt-1">
+                {locale === 'ar' ? peaceReminder.gentleAr : peaceReminder.gentleEn}
+              </p>
+            </div>
+          </div>
+        </Card>
+      )}
 
       <div className="grid gap-6 lg:grid-cols-[1.05fr_.95fr]">
         <Card>
