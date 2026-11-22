@@ -27,6 +27,9 @@ const KNOWN_ERRORS = new Set([
   'blocked',
   'unauthorized',
   'cancelled',
+  'insufficient_credits',
+  'quota_exhausted_no_credits',
+  'plan_required',
 ]);
 
 type FailedAttempt = { text: string; userId: string; assistantId: string };
@@ -84,6 +87,7 @@ export function ChatClient({
     const controller = new AbortController();
     abortRef.current = controller;
     const startedNew = convIdRef.current === null;
+    const requestId = crypto.randomUUID();
 
     const failAttempt = (code: string) => {
       setMessages((prev) => prev.filter((m) => m.id !== assistantId));
@@ -96,7 +100,7 @@ export function ChatClient({
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ message: text, conversationId: convIdRef.current, locale }),
+        body: JSON.stringify({ message: text, conversationId: convIdRef.current, locale, requestId }),
         signal: controller.signal,
       });
 

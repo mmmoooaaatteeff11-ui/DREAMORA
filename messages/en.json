@@ -14,6 +14,7 @@
     "companion": "Companion",
     "dreamScenes": "Dream Scenes",
     "faith": "Daily Faith",
+    "journey": "Journey",
     "settings": "Settings"
   },
   "auth": {
@@ -125,6 +126,82 @@
       }
     }
   },
+  "mood": {
+    "metaTitle": "Mood check-in",
+    "title": "How are you feeling today?",
+    "description": "Choose the feeling that fits best. There is no right or wrong answer.",
+    "quickTitle": "How are you today?",
+    "quickDescription": "Pick a feeling for a quick check-in.",
+    "moods": {
+      "joyful": "Joyful",
+      "grateful": "Grateful",
+      "calm": "Calm",
+      "hopeful": "Hopeful",
+      "motivated": "Motivated",
+      "tired": "Tired",
+      "anxious": "Anxious",
+      "sad": "Sad",
+      "angry": "Angry",
+      "lonely": "Lonely"
+    },
+    "noteLabel": "Optional note",
+    "notePlaceholder": "Would you like to write anything about how you feel?",
+    "save": "Save check-in",
+    "saving": "Saving...",
+    "saved": "Your check-in was saved.",
+    "support": {
+      "gentleLine": "There is room for every feeling. Take your time; your companion is here if you would like to talk.",
+      "companion": "Talk with your companion"
+    },
+    "history": {
+      "title": "Last 14 days",
+      "description": "A simple view of your daily check-ins, without judgment.",
+      "empty": "No check-ins yet. When you're ready, choose a feeling to begin.",
+      "chartLabel": "Mood scores over the last 14 days",
+      "dayScore": "{date}, mood score {score} out of 5",
+      "dayEmpty": "{date}, no check-in",
+      "today": "Today",
+      "low": "Lower score",
+      "high": "Higher score"
+    },
+    "errors": {
+      "validation": "Choose a valid mood and keep the note to 1,000 characters or fewer.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Your check-in could not be saved right now. Please try again.",
+      "load_failed": "Your mood history could not be loaded right now."
+    }
+  },
+  "journey": {
+    "metaTitle": "Journey",
+    "title": "Your journey",
+    "description": "One place for your daily steps, dreams, and notes to yourself.",
+    "cards": {
+      "mood": {
+        "title": "Mood",
+        "description": "Take a moment to note how you feel today."
+      },
+      "letters": {
+        "title": "Letters to your future self",
+        "description": "Write a note to open at a time you choose."
+      },
+      "journal": {
+        "title": "Journal",
+        "description": "Write what's on your mind and return to it anytime."
+      },
+      "roadmap": {
+        "title": "Roadmap",
+        "description": "Break your goals into small steps you can follow."
+      },
+      "vision": {
+        "title": "Vision board",
+        "description": "Collect images and ideas that remind you of your dreams."
+      },
+      "dreamScenes": {
+        "title": "Dream Scenes",
+        "description": "Imagine your dream in interactive scenes and choose your next step."
+      }
+    }
+  },
   "settings": {
     "metaTitle": "Settings",
     "title": "Settings",
@@ -170,6 +247,216 @@
       "generic": "Something went wrong. Please try again."
     }
   },
+  "roadmap": {
+    "metaTitle": "Roadmap",
+    "title": "Your roadmap",
+    "description": "Turn dreams into goals, milestones, and manageable tasks.",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "moveUp": "Move {title} up",
+    "moveDown": "Move {title} down",
+    "dreams": {
+      "title": "Add a dream",
+      "titleLabel": "Dream title",
+      "add": "Add dream",
+      "listTitle": "Dreams and their goals",
+      "empty": "No dreams yet. Add one above, or create a goal on its own.",
+      "noGoals": "No goals linked to this dream yet.",
+      "delete": "Delete dream",
+      "deleteConfirm": "Delete this dream? Its dream scenes will be deleted, but its goals, milestones, and tasks will remain unlinked."
+    },
+    "goals": {
+      "add": "Add a goal",
+      "titleLabel": "Goal title",
+      "descriptionLabel": "Description",
+      "deadlineLabel": "Deadline",
+      "statusLabel": "Status",
+      "dreamLabel": "Link to a dream (optional)",
+      "noDream": "No dream",
+      "save": "Save goal",
+      "progress": "Progress",
+      "deadlineValue": "Deadline: {date}",
+      "delete": "Delete goal",
+      "deleteConfirm": "Delete this goal? Its milestones and tasks will also be deleted. Linked letters will remain without this goal link.",
+      "unassignedTitle": "Goals without a dream"
+    },
+    "statuses": {
+      "active": "Active",
+      "completed": "Completed",
+      "paused": "Paused",
+      "archived": "Archived"
+    },
+    "milestones": {
+      "title": "Milestones",
+      "titleLabel": "Milestone title",
+      "dueDateLabel": "Due date",
+      "add": "Add milestone",
+      "empty": "No milestones yet.",
+      "toggle": "Mark {title} complete",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this milestone? Its tasks will remain under the goal."
+    },
+    "tasks": {
+      "title": "Tasks",
+      "titleLabel": "Task title",
+      "cadenceLabel": "Cadence",
+      "dueDateLabel": "Due date",
+      "add": "Add task",
+      "empty": "No tasks yet.",
+      "toggle": "Mark {title} complete",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this task?"
+    },
+    "cadences": {
+      "once": "Once",
+      "daily": "Daily",
+      "weekly": "Weekly"
+    },
+    "errors": {
+      "validation": "Check the details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again.",
+      "load_failed": "Your roadmap could not be loaded. Please try again.",
+      "not_found": "That roadmap item could not be found.",
+      "position_limit": "There are too many items to add another here."
+    }
+  },
+  "letters": {
+    "metaTitle": "Future Letters",
+    "title": "Letters to your future self",
+    "description": "Write a letter now and choose a future date to open it.",
+    "newLetter": "Write a letter",
+    "editLetter": "Edit your waiting letter",
+    "titleLabel": "Title",
+    "bodyLabel": "Your letter",
+    "bodyPlaceholder": "What would you like your future self to remember?",
+    "remainingCharacters": "{count} characters remaining",
+    "deliverOnLabel": "Open on",
+    "dateRange": "Choose a date from {min} through {max}.",
+    "presets": {
+      "days30": "30 days",
+      "days90": "90 days",
+      "months6": "6 months",
+      "year1": "1 year"
+    },
+    "save": "Save letter",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "waitingTitle": "Waiting",
+    "waitingEmpty": "No letters are waiting yet.",
+    "opensOn": "Opens on {date}",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "deleteConfirm": "Delete this waiting letter? This cannot be undone.",
+    "arrivedTitle": "Arrived",
+    "arrivedEmpty": "Letters will appear here when their date arrives.",
+    "arrivedOn": "Arrived on {date}",
+    "open": "Open",
+    "close": "Close",
+    "created": "Your letter was saved.",
+    "updated": "Your letter was updated.",
+    "deleted": "Your letter was deleted.",
+    "errors": {
+      "validation": "Check the letter details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again.",
+      "load_failed": "Letters could not be loaded. Please try again.",
+      "future_date": "Pick a future date.",
+      "sealed": "This letter is sealed.",
+      "not_found": "That letter could not be found."
+    }
+  },
+  "vision": {
+    "metaTitle": "Vision Board",
+    "title": "Your vision board",
+    "description": "Keep meaningful words, quotes, and symbols in view. Drag cards to arrange them.",
+    "boardTitle": "Your board",
+    "itemCount": "{count} of {max} items",
+    "empty": "Your board is empty. Add an item below, then drag it into place.",
+    "addTitle": "Add an item",
+    "kindLabel": "Kind",
+    "kinds": {
+      "text": "Text",
+      "quote": "Quote",
+      "emoji": "Emoji"
+    },
+    "contentLabel": "Content",
+    "contentPlaceholder": "Write a word, thought, or quote...",
+    "characters": "{count} / {max} characters",
+    "emojiLabel": "Emoji (optional)",
+    "emojiHint": "Used as an accent for emoji cards.",
+    "colorLabel": "Card color",
+    "chooseColor": "Choose color {color}",
+    "sizeLabel": "Card size",
+    "sizes": {
+      "1": "Small",
+      "2": "Medium",
+      "3": "Large"
+    },
+    "addItem": "Add to board",
+    "limitReached": "Board is full",
+    "bringToFront": "Bring forward",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this board item?",
+    "errors": {
+      "validation": "Check the item details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Something went wrong. Please try again.",
+      "not_found": "That board item could not be found.",
+      "load_failed": "Your vision board could not be loaded.",
+      "limit_reached": "Your board is full. You can have up to 60 items."
+    }
+  },
+  "journal": {
+    "metaTitle": "Journal",
+    "title": "Your journal",
+    "description": "A private space to write, reflect, and return to what matters.",
+    "newEntry": "New entry",
+    "editEntry": "Edit entry",
+    "titleLabel": "Title (optional)",
+    "bodyLabel": "Your entry",
+    "bodyPlaceholder": "Write whatever is on your mind...",
+    "remainingCharacters": "{count} characters remaining",
+    "categoryLabel": "Category",
+    "filterLabel": "Filter by category",
+    "allCategories": "All categories",
+    "categories": {
+      "general": "General",
+      "gratitude": "Gratitude",
+      "dream": "Dream",
+      "reflection": "Reflection",
+      "faith": "Faith",
+      "goals": "Goals"
+    },
+    "tagsLabel": "Tags",
+    "tagsHint": "Separate tags with commas. Up to 10 tags, 30 characters each.",
+    "searchLabel": "Search entries",
+    "searchPlaceholder": "Search for a word or phrase...",
+    "search": "Search",
+    "loadMore": "Load more",
+    "empty": "Your journal is empty. Start with a few words.",
+    "noResults": "No entries match your search or category.",
+    "save": "Save entry",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "deleteConfirm": "Delete this journal entry? This cannot be undone.",
+    "created": "Your entry was saved.",
+    "updated": "Your entry was updated.",
+    "deleted": "Your entry was deleted.",
+    "errors": {
+      "validation": "Check the entry details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "load_failed": "Journal entries could not be loaded. Please try again.",
+      "not_found": "That journal entry could not be found.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
   "companion": {
     "metaTitle": "Companion",
     "title": "Your companion",
@@ -202,6 +489,9 @@
       "upstream": "The companion couldn't reply right now. Please try again.",
       "provider_rate_limited": "The AI service is busy right now. Please wait a moment and retry.",
       "blocked": "I couldn't answer that one. Try rephrasing it.",
+      "insufficient_credits": "You don't have enough credits for this message. Add credits and try again.",
+      "quota_exhausted_no_credits": "You've used your free messages and don't have enough credits. Add credits and try again.",
+      "plan_required": "This feature needs a higher plan. Upgrade your plan and try again.",
       "unauthorized": "Your session has ended. Please sign in again.",
       "cancelled": "The reply was stopped before it finished. You can try again.",
       "generic": "Something went wrong. Please try again."
@@ -256,6 +546,12 @@
     },
     "nextPrayer": "Next prayer",
     "noNextPrayer": "Today's prayers have passed; Fajr is next.",
+    "peaceReminder": {
+      "title": "Peace reminder of the day",
+      "source": "Source",
+      "meaning": "Meaning",
+      "gentleStep": "A gentle step"
+    },
     "prayerTimes": {
       "fajr": "Fajr",
       "sunrise": "Sunrise",
@@ -380,10 +676,12 @@
     },
     "credits": {
       "title": "Optional demo credits",
-      "description": "Demo credits are for an app visit, at most once per UTC day. They are unrelated to prayer or remembrance and are not religious merit or cash value. No real coupons or commercial partnerships are available.",
+      "description": "Demo credits are for an app visit, at most once per UTC day. They are unrelated to worship or religious merit. No real coupons or commercial partnerships are available.",
       "claim": "Claim today's demo credit",
       "claimed": "Today's demo credit was added.",
       "alreadyClaimed": "Today's credit has already been claimed.",
+      "routineAwarded": "+{n} credits for completing your daily routine in the app",
+      "routineTooEarly": "Credits unlock after Isha time (6 PM)",
       "balance": "Demo balance: {balance}",
       "error": "The demo balance could not be updated. Please try again later."
     }

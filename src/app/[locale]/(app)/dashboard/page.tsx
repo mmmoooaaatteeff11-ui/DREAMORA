@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
+import { MoodQuickCheckIn } from '@/components/mood/MoodCheckIn';
 import { Link, redirect } from '@/i18n/navigation';
 import { createClient } from '@/lib/supabase/server';
 
@@ -92,6 +93,8 @@ export default async function DashboardPage({ params: { locale } }: { params: { 
           )}
         </div>
       </Card>
+
+      <MoodQuickCheckIn />
 
       <Card className="border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-transparent">
         <h2 className="font-heading text-xl font-semibold">{t('dreamScenesTitle')}</h2>
