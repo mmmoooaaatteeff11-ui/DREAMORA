@@ -247,6 +247,53 @@
       "generic": "Something went wrong. Please try again."
     }
   },
+  "journal": {
+    "metaTitle": "Journal",
+    "title": "Your journal",
+    "description": "A private space to write, reflect, and return to what matters.",
+    "newEntry": "New entry",
+    "editEntry": "Edit entry",
+    "titleLabel": "Title (optional)",
+    "bodyLabel": "Your entry",
+    "bodyPlaceholder": "Write whatever is on your mind...",
+    "remainingCharacters": "{count} characters remaining",
+    "categoryLabel": "Category",
+    "filterLabel": "Filter by category",
+    "allCategories": "All categories",
+    "categories": {
+      "general": "General",
+      "gratitude": "Gratitude",
+      "dream": "Dream",
+      "reflection": "Reflection",
+      "faith": "Faith",
+      "goals": "Goals"
+    },
+    "tagsLabel": "Tags",
+    "tagsHint": "Separate tags with commas. Up to 10 tags, 30 characters each.",
+    "searchLabel": "Search entries",
+    "searchPlaceholder": "Search for a word or phrase...",
+    "search": "Search",
+    "loadMore": "Load more",
+    "empty": "Your journal is empty. Start with a few words.",
+    "noResults": "No entries match your search or category.",
+    "save": "Save entry",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "deleteConfirm": "Delete this journal entry? This cannot be undone.",
+    "created": "Your entry was saved.",
+    "updated": "Your entry was updated.",
+    "deleted": "Your entry was deleted.",
+    "errors": {
+      "validation": "Check the entry details and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "load_failed": "Journal entries could not be loaded. Please try again.",
+      "not_found": "That journal entry could not be found.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
   "companion": {
     "metaTitle": "Companion",
     "title": "Your companion",
