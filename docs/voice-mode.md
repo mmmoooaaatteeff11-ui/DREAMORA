@@ -6,10 +6,12 @@ Voice mode uses the existing Companion conversation. Transcribed user speech is 
 
 Voice mode uses the existing server-only `LLM_API_KEY` Gemini key; it does not require another credential. The default models are configured in `.env.example`:
 
-- `VOICE_STT_MODEL=gemini-4-hydrogen` for audio transcription.
+- `VOICE_STT_MODEL=gemini-3.5-transcribe` for dedicated speech-to-text.
 - `VOICE_TTS_MODEL=gemini-3.8-flash-tts` for spoken replies.
 
 Set either variable to a model available to the Google AI project associated with `LLM_API_KEY`. Voice mode requires access to Gemini's Interactions API and the selected audio models. If they are unavailable, text chat remains usable and a localized voice error is shown.
+
+If the configured transcription model returns HTTP 503, the server retries that turn once with the alternate supported model (`gemini-4-hydrogen` or `gemini-3.5-transcribe`). Interactions are sent with `store: false` so Google does not retain them as stored interaction history.
 
 ## Privacy and limits
 

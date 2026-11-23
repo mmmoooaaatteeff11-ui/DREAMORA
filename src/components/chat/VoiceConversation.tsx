@@ -185,7 +185,10 @@ export function VoiceConversation({
         return t('voice.errors.notConfigured');
       case 'rate_limited':
       case 'rate_limit_unavailable':
+      case 'provider_rate_limited':
         return t('voice.errors.rateLimited');
+      case 'upstream':
+        return t('voice.errors.providerUnavailable');
       case 'unsupported_media':
       case 'duration_unverified':
         return t('voice.errors.unsupportedFormat');

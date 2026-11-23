@@ -640,6 +640,7 @@
       "errors": {
         "notConfigured": "Voice AI is not configured yet. You can continue in text chat.",
         "rateLimited": "Voice requests are temporarily limited. Please wait a moment.",
+        "providerUnavailable": "Speech-to-text is temporarily unavailable. Try again shortly or use text chat.",
         "unsupportedFormat": "This browser's recording format is not supported. Try another browser or use text chat.",
         "audioTooLarge": "That recording is too large. Please try a shorter recording.",
         "audioTooLong": "That recording is longer than 60 seconds. Please try a shorter recording.",
