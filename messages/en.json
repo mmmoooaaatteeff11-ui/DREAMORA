@@ -616,7 +616,7 @@
         "paused": "Speech paused",
         "error": "Voice chat needs attention"
       },
-      "microphoneHint": "Tap the microphone to speak. Tap again when you are done.",
+      "microphoneHint": "Tap the microphone. Your browser will ask for access the first time; then speak and tap again when you are done.",
       "listeningHint": "Speak naturally, then tap the microphone to send.",
       "continuous": "Hands-free conversation",
       "continuousHint": "After you start it, pauses end each turn and listening resumes after replies. End the voice session to stop the microphone.",

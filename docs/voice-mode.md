@@ -17,4 +17,6 @@ Before recording, the user must accept an in-product notice explaining that audi
 
 Browser push-to-talk and opt-in hands-free voice activity detection use Web Audio. Hands-free listening starts only after consent and an explicit microphone action; detected pauses end turns, and listening resumes after a spoken reply until the user ends the session. Push-to-talk remains available, and browsers without microphone or script-processor support receive a text-chat fallback.
 
+The site sends `Permissions-Policy: microphone=(self)`, allowing microphone access only to the Dreamora origin. On HTTPS (or localhost), accept the in-app privacy notice and tap the microphone to trigger the browser's permission prompt. If access was previously denied, allow it in the browser's site settings.
+
 Transcription also uses a per-process attempt throttle and the existing per-user completed-chat rate limit. Deployments with multiple server instances should retain the completed-chat limiter as the durable limit.
