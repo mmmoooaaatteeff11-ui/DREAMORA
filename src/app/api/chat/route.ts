@@ -7,6 +7,7 @@ import { crisisResponse, detectCrisis, pickLanguage } from '@/server/ai/crisis';
 import { commitCredits, refundCredits, reserveCredits } from '@/server/credits';
 import { buildSystemPrompt } from '@/server/ai/prompts';
 import { checkChatRateLimit } from '@/server/rate-limit';
+import { synthesizeSpeech, VoiceProviderError } from '@/server/ai/voice';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -18,6 +19,8 @@ const encoder = new TextEncoder();
 type StreamEvent =
   | { type: 'meta'; conversationId: string }
   | { type: 'delta'; text: string }
+  | { type: 'audio'; data: string; mimeType: 'audio/wav' }
+  | { type: 'voice_error'; code: string }
   | { type: 'crisis' }
   | { type: 'error'; code: string }
   | { type: 'done' };
@@ -154,7 +157,12 @@ export async function POST(request: NextRequest) {
     memories = (memoryRows ?? []).map((row: { content: string }) => row.content);
   }
 
-  const system = buildSystemPrompt({ locale, displayName: profile?.display_name, memories });
+  const system = buildSystemPrompt({
+    locale,
+    displayName: profile?.display_name,
+    memories,
+    voice: parsed.data.voice,
+  });
   const turns: ChatTurn[] = [...history, { role: 'user', content: message }];
 
   // 7) Stream the reply. Persist the user/assistant pair only after a complete response,
@@ -268,6 +276,26 @@ export async function POST(request: NextRequest) {
           }
 
           if (failedCode) send({ type: 'error', code: failedCode });
+        }
+
+        if (!failedCode && replySucceeded && parsed.data.voice) {
+          try {
+            const audio = await synthesizeSpeech({
+              text: reply,
+              language: parsed.data.voiceLanguage,
+              signal: request.signal,
+            });
+            send({ type: 'audio', data: audio.toString('base64'), mimeType: 'audio/wav' });
+          } catch (error) {
+            if (!request.signal.aborted) {
+              const code = error instanceof VoiceProviderError ? error.code : 'upstream';
+              console.error('[voice] speech generation failed', {
+                code,
+                status: error instanceof VoiceProviderError ? error.status : undefined,
+              });
+              send({ type: 'voice_error', code });
+            }
+          }
         }
       } catch (error) {
         replySucceeded = false;

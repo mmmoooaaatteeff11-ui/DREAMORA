@@ -68,7 +68,16 @@ const ITEMS = [
   { href: '/settings', key: 'settings', Icon: GearIcon },
 ] as const;
 
-const JOURNEY_PATHS = ['/journey', '/mood', '/journal', '/letters', '/roadmap', '/vision', '/dream-scenes'] as const;
+const JOURNEY_PATHS = [
+  '/journey',
+  '/mood',
+  '/journal',
+  '/letters',
+  '/roadmap',
+  '/vision',
+  '/dream-scenes',
+  '/growth/world',
+] as const;
 
 function isActive(pathname: string, href: string) {
   if (href === '/journey' && JOURNEY_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))) {

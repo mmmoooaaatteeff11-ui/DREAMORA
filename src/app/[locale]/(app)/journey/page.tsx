@@ -11,6 +11,7 @@ const JOURNEY_ITEMS = [
   { href: '/roadmap', key: 'roadmap', icon: 'roadmap' },
   { href: '/vision', key: 'vision', icon: 'vision' },
   { href: '/dream-scenes', key: 'dreamScenes', icon: 'dreamScenes' },
+  { href: '/growth/world', key: 'world', icon: 'world' },
 ] as const;
 
 type JourneyIconName = (typeof JOURNEY_ITEMS)[number]['icon'];
@@ -63,6 +64,12 @@ function JourneyIcon({ name }: { name: JourneyIconName }) {
         <>
           <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.64 5.64l2.12 2.12M16.24 16.24l2.12 2.12M18.36 5.64l-2.12 2.12M7.76 16.24l-2.12 2.12" />
           <circle cx="12" cy="12" r="4" />
+        </>
+      )}
+      {name === 'world' && (
+        <>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3.5 9h17M4 15h16M12 3c2 2.5 3 5.5 3 9s-1 6.5-3 9M12 3c-2 2.5-3 5.5-3 9s1 6.5 3 9" />
         </>
       )}
     </svg>

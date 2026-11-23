@@ -192,6 +192,10 @@
         "title": "Roadmap",
         "description": "Break your goals into small steps you can follow."
       },
+      "world": {
+        "title": "Nomouk World",
+        "description": "Explore a natural landscape shaped by your goals and growth."
+      },
       "vision": {
         "title": "Vision board",
         "description": "Collect images and ideas that remind you of your dreams."
@@ -200,6 +204,114 @@
         "title": "Dream Scenes",
         "description": "Imagine your dream in interactive scenes and choose your next step."
       }
+    }
+  },
+  "world": {
+    "metaTitle": "Nomouk World",
+    "title": "A landscape shaped by your steps",
+    "description": "A quiet place shaped by the goals you choose to grow.",
+    "summary": {
+      "goals": "Goals in motion: {count}",
+      "overcome": "Obstacles overcome: {count}"
+    },
+    "scene": {
+      "title": "The landscape",
+      "cameraLabel": "Camera view",
+      "cameras": {
+        "top": "Top view",
+        "chase": "Follow",
+        "firstPerson": "First person"
+      },
+      "weather": {
+        "clearShort": "Clear weather",
+        "clear": "Clear skies for your journey.",
+        "cloudy": "A soft cloudy day. Take your time.",
+        "rainy": "Rain passes through; you can move at your own pace."
+      },
+      "noActiveGoal": "No active goal",
+      "islandCaption": "Each place along the path reflects a goal you have chosen.",
+      "selectGoal": "Drag to look around, scroll or pinch to zoom, select a place along the path, or use the arrow keys to move between active goals.",
+      "controls": "Drag to look around · Scroll or pinch to zoom",
+      "emptyTitle": "Begin with one thing that matters",
+      "emptyDescription": "Choose a goal from your journey. It will become the first place in your world.",
+      "emptyAction": "Shape a goal",
+      "fallbackTitle": "The 3D landscape could not be loaded.",
+      "fallbackDescription": "Your goals and obstacles are still available here.",
+      "canvasLabel": "Interactive natural landscape shaped by your goals"
+    },
+    "panel": {
+      "title": "Your journey",
+      "description": "Shape your hero, companion, and goals.",
+      "show": "Open world panel",
+      "hide": "Close world panel",
+      "close": "Close panel",
+      "drag": "Drag down to close the panel",
+      "tabs": {
+        "label": "World panel sections",
+        "character": "Character",
+        "companion": "Companion",
+        "goals": "Goals"
+      },
+      "openCount": "{count} open",
+      "overcomeCount": "{count} overcome"
+    },
+    "goals": {
+      "title": "Goals in your world",
+      "empty": "No active goals yet. Choose one from your journey to begin.",
+      "unlinked": "No goal selected"
+    },
+    "obstacles": {
+      "title": "Obstacles",
+      "empty": "No obstacles saved.",
+      "unlinkedTitle": "Not linked to a goal",
+      "status": {
+        "open": "In progress",
+        "overcome": "Overcome"
+      }
+    },
+    "steps": {
+      "complete": "Completed",
+      "pending": "Not completed"
+    },
+    "character": {
+      "title": "Your hero and companion",
+      "description": "Manage the names and appearance preferences saved with your world.",
+      "hero": "Hero",
+      "heroName": "Hero name",
+      "companion": "Companion",
+      "companionName": "Companion name",
+      "gender": "Gender",
+      "genderOptions": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "skin": "Skin",
+      "hair": "Hair",
+      "shirt": "Shirt",
+      "form": "Companion form",
+      "formOptions": {
+        "nur": "Light",
+        "fox": "Fox",
+        "spirit": "Spirit"
+      },
+      "tint": "Companion color",
+      "variant": "Style {number}",
+      "swatchLabels": {
+        "skin": "Skin tone {number}",
+        "hair": "Hair color {number}",
+        "shirt": "Shirt color {number}",
+        "companion": "Companion color {number}"
+      },
+      "voice": "Enable companion voice",
+      "save": "Save character",
+      "saving": "Saving...",
+      "saved": "Your character was saved."
+    },
+    "errors": {
+      "validation": "Check the character fields and try again.",
+      "session_expired": "Your session has ended. Please sign in again.",
+      "generic": "Your character could not be saved right now.",
+      "load_failed": "Some world information could not be loaded. Please refresh to try again."
     }
   },
   "settings": {
@@ -480,6 +592,73 @@
     "typing": "Writing…",
     "deleteConversation": "Delete conversation",
     "deleteConfirm": "Delete this conversation? This cannot be undone.",
+    "voice": {
+      "open": "Start voice chat",
+      "title": "Voice conversation",
+      "privacyTitle": "Your voice and privacy",
+      "privacyBody": "When you use push-to-talk or opt into hands-free mode, audio is sent to Google Gemini for transcription and spoken replies. Dreamora does not store raw audio. Only transcripts and companion replies are saved in this conversation. You can return to text chat at any time.",
+      "acceptConsent": "Continue",
+      "cancel": "Cancel",
+      "returnToText": "Return to text chat",
+      "language": "Spoken language",
+      "languages": {
+        "auto": "Detect automatically",
+        "ar": "Arabic",
+        "en": "English"
+      },
+      "states": {
+        "idle": "Ready when you are",
+        "waiting_for_permission": "Waiting for microphone permission…",
+        "listening": "Listening",
+        "transcribing": "Transcribing your words…",
+        "thinking": "Your companion is thinking…",
+        "speaking": "Your companion is speaking",
+        "paused": "Speech paused",
+        "error": "Voice chat needs attention"
+      },
+      "microphoneHint": "Tap the microphone to speak. Tap again when you are done.",
+      "listeningHint": "Speak naturally, then tap the microphone to send.",
+      "continuous": "Hands-free conversation",
+      "continuousHint": "After you start it, pauses end each turn and listening resumes after replies. End the voice session to stop the microphone.",
+      "continuousStartHint": "Tap the microphone once to start hands-free listening.",
+      "continuousListeningHint": "Hands-free is listening. A pause sends your turn; end the session to stop listening.",
+      "pushToTalkHint": "Push-to-talk: you control when each recording starts and stops.",
+      "durationLimit": "Each recording can be up to 60 seconds.",
+      "startRecording": "Start recording",
+      "stopRecording": "Stop recording",
+      "interrupt": "Interrupt speech and speak",
+      "interruptResponse": "Interrupt response",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "pause": "Pause",
+      "resume": "Resume",
+      "stopSpeaking": "Stop speaking",
+      "endSession": "End voice session",
+      "playResponse": "Play response",
+      "youSaid": "You said",
+      "companionSaid": "Your companion",
+      "errors": {
+        "notConfigured": "Voice AI is not configured yet. You can continue in text chat.",
+        "rateLimited": "Voice requests are temporarily limited. Please wait a moment.",
+        "unsupportedFormat": "This browser's recording format is not supported. Try another browser or use text chat.",
+        "audioTooLarge": "That recording is too large. Please try a shorter recording.",
+        "audioTooLong": "That recording is longer than 60 seconds. Please try a shorter recording.",
+        "noSpeech": "No clear speech was detected. Please try again.",
+        "transcriptTooLong": "That transcript is too long to send as one message.",
+        "sessionExpired": "Your session has ended. Please sign in again.",
+        "transcriptionFailed": "Your words could not be transcribed. Check your connection and try again.",
+        "speechTooLong": "The reply is available as text, but is too long to read aloud.",
+        "speechUnavailable": "The reply is available as text, but audio is temporarily unavailable.",
+        "playbackFailed": "Audio could not be played. Try playing the response again.",
+        "tapToPlay": "Tap play to hear the response.",
+        "chatFailed": "The companion could not complete this turn. Your transcript is still here.",
+        "cancelled": "Response stopped.",
+        "unsupported": "Voice recording is not supported in this browser. You can continue in text chat.",
+        "permissionDenied": "Microphone permission was denied. Allow microphone access in your browser settings and try again.",
+        "microphoneUnavailable": "No microphone was found. Connect a microphone or continue in text chat.",
+        "recordingFailed": "Recording could not start. Check microphone access and try again."
+      }
+    },
     "errors": {
       "rate_limited": "You're sending messages quite fast. Please wait a bit and try again.",
       "rate_limit_unavailable": "The message limit could not be checked right now. Please try again shortly.",

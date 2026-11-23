@@ -79,7 +79,7 @@ export default async function DashboardPage({ params: { locale } }: { params: { 
         <div className="mt-5 flex flex-wrap items-center gap-3">
           <Link
             href="/companion"
-            className="inline-flex h-12 items-center justify-center rounded-pill bg-gradient-to-r from-[#6D28D9] to-primary px-6 font-semibold text-white shadow-glow transition hover:brightness-110"
+            className="inline-flex h-12 items-center justify-center rounded-pill border border-[#E5E8DF]/60 bg-[#D8DFD3] px-7 font-semibold text-[#26342D] shadow-[0_3px_12px_rgba(0,0,0,0.10)] transition-all duration-200 hover:bg-[#E7EADF] active:scale-[0.98]"
           >
             {t('companionCta')}
           </Link>

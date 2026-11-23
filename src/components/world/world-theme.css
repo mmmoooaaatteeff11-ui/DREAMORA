@@ -1,0 +1,48 @@
+.world-theme {
+  --w-base: #19231F;
+  --w-surface: #222D27;
+  --w-surface-2: #26342D;
+  --w-border: #3A4940;
+  --w-ink: #F0EEE6;
+  --w-muted: #A9B2A7;
+  --w-primary: #E7E2D6;
+  --w-primary-hover: #D3CCBD;
+  --w-primary-ink: #19231F;
+  --w-accent: #A9B2A7;
+  --w-sand: #B9A486;
+  --w-danger: #C78379;
+  color: var(--w-ink);
+  background-color: var(--w-base);
+}
+
+.world-theme .world-scene {
+  outline: none;
+}
+
+.world-theme .world-scene:focus-visible {
+  outline: 2px solid var(--w-accent);
+  outline-offset: -4px;
+}
+
+.world-theme .world-scene-loading {
+  background-color: var(--w-base);
+  animation: world-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.world-theme .world-skeleton {
+  background-color: var(--w-surface);
+  animation: world-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes world-skeleton-shimmer {
+  50% {
+    background-color: var(--w-surface-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world-theme .world-skeleton,
+  .world-theme .world-scene-loading {
+    animation: none;
+  }
+}
